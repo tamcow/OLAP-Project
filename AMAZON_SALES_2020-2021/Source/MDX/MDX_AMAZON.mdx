@@ -1,0 +1,73 @@
+﻿//1. Đếm số lượng ma đơn hang (order_id) với phương thức thanh toán thành phố brownstown theo từng năm
+SELECT NON EMPTY [Measures].[FACT Order Count] ON COLUMNS,
+NON EMPTY([DIM Order Date].[Year].Children) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Customers].[City].&[Brownstown];
+
+//2. Cho biết khu vực (Region) có số ma đơn hàng (order_id) nhiều nhất và số đơn hàng ít nhất 
+SELECT NON EMPTY [Measures].[FACT Order Count] ON COLUMNS,
+NON EMPTY UNION(TOPCOUNT({[DIM Customers].[Region].Children},1,[Measures].[FACT Order Count]),
+                               BOTTOMCOUNT({[DIM Customers].[Region].Children},2,[Measures].[FACT Order Count])) ON ROWS
+FROM [AMAZON SL];
+
+//3. Cho biết 5 thành phố có nhiều mã đơn hàng nhất trong năm 2021
+SELECT NON EMPTY [Measures].[FACT Order Count] ON COLUMNS,
+TOPCOUNT([DIM Customers].[City].Children,5,[Measures].[FACT Order Count]) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Year].&[2021];
+
+//4. Hãy cho biết 3 thành phố có số lượng đơn hàng thấp nhất và tổng chi phí đơn hàng của thành phố trong năm 2020.
+SELECT {[Measures].[Qty Ordered],[Measures].[Value]} on Columns,
+NON EMPTY BOTTOMCOUNT( 
+		{[DIM Customers].[City].children}
+		,4,[Measures].[Qty Ordered]
+) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Year].&[2020];
+
+//5. Với từng loại sản phẩm liệt kê doanh thu có bang là Ri
+SELECT NON EMPTY  {[Measures].[Value]} ON COLUMNS, 
+NON EMPTY{[DIM Goods].[Category].children*[DIM Order Date].[Month].children}ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Customers].[State].&[Ri];
+
+//6. Chon ra 10 đơn hàng có giá trị lớn nhất tại hạt Accomack cua tung thang trong nam 2020
+SELECT NON EMPTY  [Measures].[Value] ON COLUMNS,
+NON EMPTY TopCount ([DIM Customers].[County].[Accomack]*[DIM Order Date].[Month].Children,10,[Measures].[Value]) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Year].&[2020];
+
+//7. Hiển thị các email có số đơn hàng nhiều nhất nhất trong tháng 10 năm 2020.
+SELECT NON EMPTY {[Measures].[FACT Order Count]} ON COLUMNS,
+NON EMPTY TOPCOUNT({[DIM Customers].[E Mail].Children},5,[Measures].[FACT Order Count]) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Y_M].&[2020].&[10];
+
+//8. Hãy cho biết 4 bang  có tổng số đơn hàng thấp hàng nhất trong năm 2020
+SELECT NON EMPTY [Measures].[FACT Order Count] ON COLUMNS,
+NON EMPTY BOTTOMCOUNT([DIM Customers].[State].Children,5,[Measures].[FACT Order Count]) ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Year].&[2020];
+
+//9.Hãy cho biết tổng chi phí đơn hàng lớn nhất của thành phố Alto theo từng tháng ,từng năm
+Select Non empty{[Measures].[Value]} on Columns,
+NON EMPTY{DrillDownLevel(
+		  DrillDownLevel([DIM Order Date].[Y_M]))}on Rows
+From [AMAZON SL]
+WHERE [DIM Customers].[City].&[Alto];
+
+//10. Hiển thị số lượng đặt hàng của độ tuổi 70 trong mỗi tháng của năm 2020.
+SELECT NON EMPTY [Measures].[Qty Ordered] ON COLUMNS,
+NON EMPTY([DIM Order Date].[Month].Children * [DIM Customers].[Age].&[70])ON ROWS
+FROM [AMAZON SL]
+WHERE [DIM Order Date].[Year].&[2020];
+ 
+//Pivot
+SELECT NON EMPTY
+([DIM Order Date].[Month].Children * [DIM Customers].[Age].&[70])ON COLUMNS,[Measures].[Qty Ordered] ON ROWS
+FROM [AMAZON SL]
+WHERE[DIM Order Date].[Year].&[2020];
+
+
+
+

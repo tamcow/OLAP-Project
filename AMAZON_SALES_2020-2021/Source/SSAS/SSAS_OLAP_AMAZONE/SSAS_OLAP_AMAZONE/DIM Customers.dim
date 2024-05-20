@@ -1,0 +1,443 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d2fd80ab-fb6d-4d0a-8370-f75c12a2bf27" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM Customers</ID>
+  <Name>DIM Customers</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2120" scrolltop="-1663" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7281" y="11663" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_Customers" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_Customers" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2120</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1663</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8519a8d0-a07d-4c5a-afdc-9991a66927f3">
+    <DataSourceViewID>AMAZON SL</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="dd341240-534b-4022-9906-efae5eb71a4e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="665bac20-36c3-42f2-94e3-5c5994e65ce8">
+      <ID>Cust Id</ID>
+      <Name>Cust Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e081df7-341f-443b-a84e-bebb0607bead">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f3d9604-f990-4d3c-a279-6ce3220e9305">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>cust_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b78da379-af97-4322-8a0f-d01d5d3ac00e">
+          <AttributeID>Name Prefix</AttributeID>
+          <Name>Name Prefix</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="440c4a5b-136a-4ce4-9db2-96d00a251a5e">
+          <AttributeID>First Name</AttributeID>
+          <Name>First Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a21dcaf9-67c8-46f2-92d2-2944a3880d5b">
+          <AttributeID>Middle Initial</AttributeID>
+          <Name>Middle Initial</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="13f506a1-f8dd-479a-a92e-00904846a85b">
+          <AttributeID>Last Name</AttributeID>
+          <Name>Last Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b09d110b-f48e-43dd-aa03-44d081afc0c3">
+          <AttributeID>Gender</AttributeID>
+          <Name>Gender</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a0f52f98-159c-4aa0-bb08-bb25956240fa">
+          <AttributeID>Age</AttributeID>
+          <Name>Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f1530a46-b16f-4090-8fe1-5e3e3fd43b40">
+          <AttributeID>Full Name</AttributeID>
+          <Name>Full Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="226bff9e-0bb7-48ac-bd5f-b5b4c0c2120c">
+          <AttributeID>E Mail</AttributeID>
+          <Name>E Mail</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="af23aba9-f0c7-4e65-a1ff-d4bdd9118561">
+          <AttributeID>Sign In Date</AttributeID>
+          <Name>Sign In Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bec6fdcb-27d2-4102-8a54-27734758c370">
+          <AttributeID>Phone No</AttributeID>
+          <Name>Phone No</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d76ed1d0-c078-44cc-aaf0-177e3413f1b4">
+          <AttributeID>Place Name</AttributeID>
+          <Name>Place Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ed149590-4f56-4fc5-a8c7-680039e8fff4">
+          <AttributeID>County</AttributeID>
+          <Name>County</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="aa7bfd90-b1fa-4803-ab52-710e6ef65cfc">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2804cc1-6283-49dc-b267-e7b158d58e02">
+          <AttributeID>State</AttributeID>
+          <Name>State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d8776421-946a-432b-9896-5482f175f33d">
+          <AttributeID>Zip</AttributeID>
+          <Name>Zip</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="452f5c76-2080-408f-989b-5b3dfd34bb5c">
+          <AttributeID>Region</AttributeID>
+          <Name>Region</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bb8b29d0-f8b7-406b-b4a5-9509f99406b5">
+          <AttributeID>User Name</AttributeID>
+          <Name>User Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="45069b0d-e122-4034-823c-9a04eafd8786">
+      <ID>Name Prefix</ID>
+      <Name>Name Prefix</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d255a595-ebd4-4242-b769-0dfaace034ae">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c36e95b1-4a0e-4af8-b84c-5e1419298707">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Name_x0020_Prefix</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc6a04db-c989-4a79-b004-f8606ddbcf1c">
+      <ID>First Name</ID>
+      <Name>First Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="07290478-24d5-45ec-a49e-c16a9fe71048">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccad1e0a-43e7-4a1e-a7ce-8c30d418fa7c">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>First_x0020_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="534ea830-b8e7-4ddd-a096-cd1714f3c2fb">
+      <ID>Middle Initial</ID>
+      <Name>Middle Initial</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dbcbe234-151d-4ec4-ad3c-4472f6cf4bfe">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54947879-9ebe-42da-a2b0-6a36ea2bd7ac">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Middle_x0020_Initial</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ad92e40c-02a0-49c1-9698-2287260c1f57">
+      <ID>Last Name</ID>
+      <Name>Last Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="32c4de07-2aa3-4f91-badc-898345fd1093">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d757ce11-e899-44fc-85a1-b371c3d60c6d">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Last_x0020_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3674656c-ef4e-425d-b16a-abfdf09eab28">
+      <ID>Gender</ID>
+      <Name>Gender</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="43ea12d3-343a-47c1-bedc-4fbc252aba4c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="195f4664-02e3-4912-98a9-670c5281e93e">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Gender</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9a329546-f40a-425a-a5a8-7d827ab7722a">
+      <ID>Age</ID>
+      <Name>Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9c674022-b727-45fe-9c8f-9725dcda46a6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30da69fd-d9da-4556-81df-ac9bf7f6cfa6">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9c52fc1a-98ad-4c68-8e4c-1ea6e66af137">
+      <ID>Full Name</ID>
+      <Name>Full Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c913b6a7-2cbf-40fc-ba14-d3b75b69a37d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="61773f0e-ecd3-4b32-b828-b1ad11804ec6">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>full_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ff5ac07b-3bb7-4e0a-8d46-e9bdff87ab90">
+      <ID>E Mail</ID>
+      <Name>E Mail</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d319921-38a9-49f5-99ad-2a71e0692c99">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e549b928-2c39-4f0f-95a8-a333649123ac">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>E_x0020_Mail</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="972cfc7c-e6d5-4538-ad87-54aa42da06c8">
+      <ID>Sign In Date</ID>
+      <Name>Sign In Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f42a1e21-000d-488b-8000-376f18a206bd">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c73b9bdd-0a28-4a81-be86-c5ba903eb529">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Sign_x0020_in_x0020_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aca67661-148c-46c0-835e-45544218c76d">
+      <ID>Phone No</ID>
+      <Name>Phone No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9fa3df41-d2cf-4ce7-b7a6-670c192c84f7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="165b346b-9626-4c52-8196-fb94e8b8cc83">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Phone_x0020_No_x0020__x0020_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5083277a-c2b9-4209-b798-10488e0ae571">
+      <ID>Place Name</ID>
+      <Name>Place Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6d556066-8694-4673-97d4-845205468b4e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="212ca9d6-7d16-42ee-8a2b-d4da6c37100f">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Place_x0020_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d4202c38-7377-49a0-9133-bf35d137b5f8">
+      <ID>County</ID>
+      <Name>County</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="be1031ac-17c4-4b10-93c9-bfed2a846279">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9fc3a4e-5334-425c-b85c-9840c594b380">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>County</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f4803992-f291-426c-b433-37461702a21a">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e09d768-7ea4-41f3-8632-791e4750ce01">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b3eaa42-7320-4b32-acfe-a7000f72d1c3">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a5c207c2-0b09-4c37-b6f8-d317e197dddc">
+      <ID>State</ID>
+      <Name>State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8fa0d6a5-e039-43d9-963d-786f49960c0c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e98b7f21-f297-4991-9112-bb481d5b200f">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>State</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="236573a8-1034-4340-89c5-11864b225dd5">
+      <ID>Zip</ID>
+      <Name>Zip</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3dfeb769-7220-4b28-bb53-3fe2bffeb26f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2def41a2-733b-4ee5-a215-3b4663b127a5">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Zip</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a3b0b11a-f3c7-4914-a856-7e5187bbfebc">
+      <ID>Region</ID>
+      <Name>Region</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e633ae2c-5988-4b05-8cab-5208a5e3a9f1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="779fe551-631c-433b-87cf-73c0703d57ee">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>Region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd451627-0007-46ec-a566-2b993506d4ac">
+      <ID>User Name</ID>
+      <Name>User Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b7def542-f603-4bde-bdf1-b33506190a06">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd61ccfd-fee7-456f-9441-74be523868f3">
+            <TableID>dbo_DIM_Customers</TableID>
+            <ColumnID>User_x0020_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
